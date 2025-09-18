@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../Css/menu.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="icon" type="image/x-icon" href="../imagens/icon.png">
+        <script src="../Js/conta.js" defer></script>
+
+        <title>Teen Finance</title>
+    </head>
+    <body>
+
+        <nav class="Menu-bottom">
+
+            <div class="logo">
+                <h1> <span class="icon"><i class="bi bi-house"></i></span> Aprenda Conosco</h1>     
+            </div>
+            <div class="bottom-list">
+                <ul>
+                    <li class="bottom-item">
+                        <a class="bottom-linkDaConta" onclick="toggleMenu()">
+                            <span class="icon"><i class="bi bi-person-circle"></i></span>
+                            <span class="txt-link">Conta</span> 
+                        </a>
+                    </li>
+                    
+                    <div class="account-menu" id="accountMenu">
+                        <ul>
+                            <li> <a class="bottom-perfil" id="link" onclick="abrirModal()">
+                                <span class="txt-link"><span class="icon"><i class="bi bi-person-fill-gear"></i></span> Perfil</span> 
+                                </a>
+                            </li>
+                            <li><a class="bottom-perfil" id="link2" onclick="abrirModal2()">
+                                <span class="txt-link"><span class="icon"><i class="bi bi-gear"></i></span> Configs</span> 
+                                </a></li>
+                            <li><a href="PaginaInicial.html"><span class="icon"><i class="bi bi-door-open"></i></span>Log-out</a></li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="menu-lateral">
+            <div class="expandir">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul>
+
+                <li class="item-menu-especial">
+                    <a>
+                        <span class="icon"><i class="bi bi-house"></i></span>
+                        <span class="txt-link">Home</span>
+                    </a>
+
+                <li class="item-menu">
+                    <a onclick="toggleSubMenu(event)">
+                        <span class="icon"><i class="bi bi-columns-gap"></i></span>
+                        <span class="txt-link">Cursos</span>
+                    </a>
+                </li>
+                        <div class="sub-menu" id="cursosSubMenu">
+                            <li class="item-menu3"><a href="Videos.html">
+                                <span class="icon"><i class="bi bi-play-btn"></i></span>
+                                <span class="txt-link">Vídeos</span>
+                            </a></li>
+                            <li class="item-menu3"><a href="Apostilas.html">
+                                <span class="icon"><i class="bi bi-book"></i></span>
+                                <span class="txt-link">Apostilas</span>
+                            </a></li>
+                            <li class="item-menu3"><a href="Podcasts.html">
+                                <span class="icon"><i class="bi bi-mic"></i></span>
+                                <span class="txt-link">Podcasts</span>
+                            </a></li>
+                        </div>
+
+                <li class="item-menu"><a href="Sobre.html">
+                    <span class="icon"><i class="bi bi-people"></i></span>
+                    <span class="txt-link">Sobre</span>
+                </a></li>
+
+                <li class="item-menu2">
+                    <a href="PaginaInicial.html">
+                        <span class="icon"><i class="bi bi-box-arrow-right"></i></span>
+                        <span class="txt-link">Sair</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="configs e perfil">
+            <!-- Fundo embaçado -->
+            <div id="fundo" class="fundo-embaçado"></div>
+
+            <div id="modal" class="modal">
+                <h2>Perfil </h2>
+                <h3>Usuário: <span id="nomeUsuario">Carregando...</span></h3>
+                <h3>Email: <span id="emailUsuario">Carregando...</span></h3>
+                <button class="fechar" onclick="fecharModal()">Fechar</button>
+            </div> 
+
+            <div id="fundo2" class="fundo-embaçado"></div>
+            <div id="modal2" class="modal">
+                <h2>Configurações:</h2>
+                <div >
+                    <ul>
+                        <li> <a href="Login.html" class="bottom-perfil"><h3>
+                            <span class="txt-link"><span class="icon"><i class="bi bi-arrow-repeat"></i></span> Trocar de conta</span> 
+                            </h3></a>
+                        </li>
+                        <li> <a href="PaginaInicial.html" class="bottom-perfil"><h3>
+                                <span class="txt-link"><span class="icon"><i class="bi bi-door-open"></i></span> Desconectar conta</span> 
+                                </h3></a>
+                        </li>
+                        <li> <a href="PaginaInicial.html" class="bottom-perfil"><h3>
+                            <span class="txt-link"><span class="icon"><i class="bi bi-person-fill-x"></i></span> Excluir conta</span> 
+                            </h3></a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <button class="fechar" onclick="fecharModal2()">Fechar</button>
+            </div>
+        </nav>
+        <main>
+            <div class="inicial">
+            <h4>Teen Finance</h4>
+            <h3>Desvendando o conhecimento</h3>
+            </div>
+            <aside>
+                <div class="conteudo">
+                    
+                    <h2>Apredizado dinâmico:</h2>     
+                    <h3>
+                        O Teen Finance é uma plataforma inovadora dedicada ao aprendizado de educação financeira para jovens, oferecendo uma abordagem acessível e envolvente para o desenvolvimento de habilidades financeiras desde cedo. Por meio de uma variedade de recursos, como podcasts, vídeos e apostilas, o site busca proporcionar um conteúdo de qualidade que ajude os adolescentes a entender e administrar suas finanças pessoais com mais consciência e autonomia.
+                    </h3>
+                </div>                           
+                <div class="cont">
+                    <h2>Educação Financeira para Jovens:</h2>
+                    <h3>A proposta do Teen Finance é simplificar conceitos financeiros de forma que sejam facilmente compreendidos pelo público jovem, abordando temas essenciais como orçamento pessoal, poupança, investimentos, gestão de dívidas e até empreendedorismo. Esses temas, que podem parecer complexos para quem está começando a entender o mundo financeiro, são apresentados de maneira dinâmica e didática, com a linguagem acessível e contextualizada para os desafios e interesses dos adolescentes.</h3>
+                </div>
+                <div class="cont">
+                    <h2>Podcasts: Aprendizado de Forma Ágil</h2>
+                    <h3>Os podcasts do Teen Finance são uma das formas mais populares de aprender no site. Disponíveis gratuitamente, esses episódios abordam temas relevantes e são uma maneira prática de consumir conteúdo, ideal para quem tem uma rotina agitada. Seja enquanto estuda, viaja ou faz tarefas cotidianas, os jovens podem ouvir especialistas discutindo sobre finanças, estratégias de economia e entrevistas com jovens que já começaram a empreender, tornando o aprendizado mais real e inspirador.</h3>
+                </div>
+                <div class="cont">
+                    <h2>Vídeos: Conteúdo Visual e Interativo</h2>
+                    <h3>Além dos podcasts, o Teen Finance também oferece uma série de vídeos educativos que tornam o processo de aprendizagem mais visual e interativo. Esses vídeos trazem explicações claras e simples sobre como administrar o dinheiro, controlar gastos e investir de maneira inteligente. A combinação de animações, gráficos e exemplos práticos torna os conceitos mais tangíveis e fáceis de entender, promovendo um aprendizado mais dinâmico.</h3>
+                </div>
+                <div class="cont">
+                    <h2>Apostilas: Aprendizado Estruturado</h2>
+                    <h3>Para aqueles que preferem um formato mais tradicional de estudo, o Teen Finance disponibiliza uma coleção de apostilas que podem ser baixadas e estudadas offline. Essas apostilas são cuidadosamente preparadas, com conteúdo detalhado e passo a passo, para que os jovens possam se aprofundar em tópicos específicos de educação financeira e revisar os conceitos em seu próprio ritmo. O melhor de tudo é que todos esses recursos estão disponíveis gratuitamente, permitindo que qualquer jovem tenha acesso a um material de qualidade sem custos.</h3>
+                </div>
+            </aside>
+            <div class="inicial">
+                <br><h5>Venha aprender com a gente!!!</h5>
+                <br><br>
+                <p>&copy; 2024 Teen Finance. Todos os direitos reservados.</p>
+            </div>
+        </main>
+        <article><!-- div semantica para abrigar imagens -->
+            <div class="image-container">
+                <img src="../imagens/menina.png" alt="menina inteligênte que usa o Blue Grouper e economiza muito dinheiro">
+            </div>
+        </article>
+
+    </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../Css/sobre.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <script src="../Js/conta.js" defer></script>
+        <link rel="icon" type="image/x-icon" href="../imagens/icon.png">
+        <title>Sobre TF</title>
+    </head>
+    <body>
+
+
+
+        <nav class="Menu-bottom">
+            <div class="logo">
+
+
+                <h1> <span class="icon"><i class="bi bi-people"></i></span> Sobre nós</h1>
+            </div>
+
+            
+            <div class="bottom-list">
+                <ul>
+                    <li class="bottom-item">
+                        <a class="bottom-linkDaConta" onclick="toggleMenu()">
+                            <span class="icon"><i class="bi bi-person-circle"></i></span>
+                            <span class="txt-link">Conta</span> 
+                        </a>
+                    </li>
+                    
+                    <div class="account-menu" id="accountMenu">
+                        <ul>
+                            <li> <a class="bottom-perfil" id="link" onclick="abrirModal()">
+                                <span class="txt-link"><span class="icon"><i class="bi bi-person-circle"></i></span> Perfil</span> 
+                                </a>
+                            </li>
+                            <li><a class="bottom-perfil" id="link2" onclick="abrirModal2()">
+                                <span class="txt-link"><span class="icon"><i class="bi bi-gear"></i></span> Configs</span> 
+                                </a></li>
+                            <li><a href="PaginaInicial.html"><span class="icon"><i class="bi bi-door-open"></i></span>Log-out</a></li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="menu-lateral">
+            <div class="expandir">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul>
+
+                <li class="item-menu">
+                    <a href="Site.html">
+                        <span class="icon"><i class="bi bi-house"></i></span>
+                        <span class="txt-link">Home</span>
+                    </a>
+
+                <li class="item-menu">
+                    <a onclick="toggleSubMenu(event)">
+                        <span class="icon"><i class="bi bi-columns-gap"></i></span>
+                        <span class="txt-link">Cursos</span>
+                    </a>
+                </li>
+                        <div class="sub-menu" id="cursosSubMenu">
+                            <li class="item-menu3"><a href="Videos.html">
+                                <span class="icon"><i class="bi bi-play-btn"></i></span>
+                                <span class="txt-link">Vídeos</span>
+                            </a></li>
+                            <li class="item-menu3"><a href="Apostilas.html">
+                                <span class="icon"><i class="bi bi-book"></i></span>
+                                <span class="txt-link">Apostilas</span>
+                            </a></li>
+                            <li class="item-menu3"><a href="Podcasts.html">
+                                <span class="icon"><i class="bi bi-mic"></i></span>
+                                <span class="txt-link">Podcasts</span>
+                            </a></li>
+                        </div>
+
+                <li class="item-menu-especial"><a>
+                    <span class="icon"><i class="bi bi-people"></i></span>
+                    <span class="txt-link">Sobre</span>
+                </a></li>
+
+                <li class="item-menu2">
+                    <a href="PaginaInicial.html">
+                        <span class="icon"><i class="bi bi-box-arrow-right"></i></span>
+                        <span class="txt-link">Sair</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+                <div class="conteudo">
+                    <h2>Teen Finance</h2>
+                    <h3>Pescando conhecimento</h3>  
+
+                    <h3>Bem-vindo ao Teen Finance! Somos uma plataforma dedicada a empoderar jovens com o conhecimento e as habilidades necessárias para tomar decisões financeiras inteligentes. Acreditamos que a educação financeira é essencial para o sucesso pessoal e profissional, e nosso objetivo é tornar esse aprendizado acessível e divertido.
+                        Aqui, você encontrará recursos interativos, dicas práticas, e conteúdos envolventes que abordam tópicos como orçamento, investimento, consumo consciente e empreendedorismo. Nossa equipe é composta por especialistas em finanças e jovens entusiastas que entendem as necessidades e desafios da sua faixa etária.
+                        No Teen Finance, incentivamos a curiosidade e a exploração, ajudando você a desenvolver uma mentalidade financeira saudável desde cedo. Junte-se a nós nessa jornada para se tornar um adolescente financeiramente consciente e preparado para o futuro!
+                        Vamos juntos construir um amanhã mais seguro e próspero!
+                    </h3>
+                    <br>
+                    <p>&copy; 2024 Teen Finance. Todos os direitos reservados.</p>
+                </div>
+                <div id="fundo" class="fundo-embaçado"></div>
+                <div id="modal" class="modal">
+                    <h2>Perfil</h2>
+                    <h3>As informações da conta ficaram aqui</h3>
+                    <button class="fechar" onclick="fecharModal()">Fechar</button>
+                </div> 
+          
+                <div id="fundo2" class="fundo-embaçado"></div>
+                <div id="modal2" class="modal">
+                  <h2>Configurações</h2>
+                  <h3>As configurações do site ficaram aqui</h3>
+                  <button class="fechar" onclick="fecharModal2()">Fechar</button>
+              </div>  
+        </main>  
+        <article><!-- div semantica para abrigar imagens -->
+            <div class="image-container">
+            <img src="../imagens/menina.png" alt="menina inteligênte que usa o Blue Grouper e economiza muito dinheiro">
+            </div>
+        </article> 
+    </body>
+</html>

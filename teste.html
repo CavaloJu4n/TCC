@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal com Fundo Embaçado</title>
+    <style>
+        /* Estilos para a página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Link que irá abrir o modal */
+        #link {
+            margin: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        /* O fundo embaçado */
+        .fundo-embaçado {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Cor do fundo embaçado */
+            backdrop-filter: blur(5px); /* Aplica o desfoque */
+            display: none; /* Inicialmente escondido */
+            z-index: 1;
+        }
+
+        /* Estilo da caixa do modal */
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            display: none; /* Inicialmente escondido */
+        }
+
+        /* Botão para fechar o modal */
+        .fechar {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#" id="link">Clique aqui para abrir o modal</a>
+
+    <!-- Fundo embaçado -->
+    <div id="fundo" class="fundo-embaçado"></div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <h2>Este é o conteúdo do modal</h2>
+        <p>Você pode colocar qualquer conteúdo aqui.</p>
+        <button class="fechar" onclick="fecharModal()">Fechar</button>
+    </div>
+
+    <script>
+        // Função para abrir o modal
+        function abrirModal() {
+            document.getElementById("fundo").style.display = "block";
+            document.getElementById("modal").style.display = "block";
+        }
+
+        // Função para fechar o modal
+        function fecharModal() {
+            document.getElementById("fundo").style.display = "none";
+            document.getElementById("modal").style.display = "none";
+        }
+
+        // Ao clicar no link, abre o modal
+        document.getElementById("link").addEventListener("click", function(event) {
+            event.preventDefault(); // Evita o comportamento padrão do link
+            abrirModal();
+        });
+
+        // Ao clicar no fundo (embaçado), fecha o modal
+        document.getElementById("fundo").addEventListener("click", fecharModal);
+    </script>
+
+</body>
+</html>
